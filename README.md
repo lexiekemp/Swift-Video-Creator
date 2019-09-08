@@ -7,7 +7,7 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone or download the repo, open the workspace under the Example Folder, then run the project.
 
 ![](example.gif)
 
@@ -17,9 +17,18 @@ Swift 5.0
 
 ## Installation
 
-SwiftVideoCreator is available through [CocoaPods](https://cocoapods.org). You will need to have cocoapods installed. To install
-SwiftVideoCreator, add the following line to your Podfile:
+SwiftVideoCreator is available through [CocoaPods](https://cocoapods.org). If you have not already, first install cocoapods from the command line:
 
+```ruby
+sudo gem install cocoapods
+```
+
+Then, if you have not already, navigate to your project directory from the command line and run:
+
+```ruby
+pod init
+```
+Add the following line to your Podfile:
 
 ```ruby
 platform :ios, '10.0'
@@ -28,7 +37,12 @@ target '<Your Target Name>' do
 pod 'SwiftVideoCreator'
 end
 ```
-Next, run pod install from the command line in your project directory.
+Next, from the command line in your project directory, run:
+
+```ruby
+pod install
+```
+Go to your project folder and open the workspace. Now you are ready to create a video.
 
 ## Usage
 Import the pod
@@ -70,7 +84,7 @@ Origin is the bottom left corner
 SwiftVideoCreator.current.createVideo(
 fileName: "exampleVideo", 
 compositionSize: CGSize(width: 360, height: 360), 
-videoUrl: waveUrl, 
+videoUrl: videoUrl, 
 videoSize: CGSize(width: 360, height: 90), 
 videoOrigin: CGPoint(x: 0, y: 100), 
 videoOpacity: 0.7, 
@@ -89,6 +103,9 @@ failure: { error in
 If you want to open the video in a video player, use the following function
 
 ```ruby
+import AVKit
+import AVFoundation
+
 func playVideo(videoUrl: URL) {
     let player = AVPlayer(url: videoUrl)
     let playerVC = AVPlayerViewController()
