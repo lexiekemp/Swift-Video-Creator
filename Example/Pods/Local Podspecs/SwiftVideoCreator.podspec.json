@@ -1,0 +1,22 @@
+{
+  "name": "SwiftVideoCreator",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftVideoCreator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Lexie Kemp/SwiftVideoCreator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lexie Kemp": "lexie.kd@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Lexie Kemp/SwiftVideoCreator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftVideoCreator/Classes/**/*"
+}

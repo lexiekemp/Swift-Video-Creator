@@ -1,0 +1,6 @@
+framework module SwiftVideoCreator {
+  umbrella header "SwiftVideoCreator-umbrella.h"
+
+  export *
+  module * { export * }
+}
